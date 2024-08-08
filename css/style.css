@@ -1,23 +1,5 @@
-.div div{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-}
-
-
-.div{
-    background-color: #b0b0b0;
-    width:auto;
-    height: 100vh;
-    display: flex;
-    gap: 10px;
-}
-
-.num{
-    display: flex;
-  
-    align-items: center;
-    justify-content: center;
-
  
-}
+
+ a{
+   color: blue;
+ }
