@@ -43,20 +43,4 @@ console.log(counter());//2
 console.log(counter());//3
 console.log(counter());//4
 
-
-
-
-const counFun=()=>{
-    return function(){
-        let count =0
-        count +=1;
-        return count;
-    };
-}
-
-const count = counFun();
-
-console.log(count()); //1
-console.log(count());//1
-console.log(count());//1
-console.log(count());//1
+ 
