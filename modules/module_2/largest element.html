@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[1,4,7,3,6];
+        let len=arr.length;
+        for(i=0;i<=len-1;i++)
+        {
+            for(j=i+1;j<=len-1;j++)
+            {
+            if(arr[i]>arr[j])
+            {
+                let t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+            }
+        }
+      
+        console.log("largest element is  "+arr[len-1]);
+        
+    </script>
+</body>
+</html>

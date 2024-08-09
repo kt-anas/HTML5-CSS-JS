@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function oddeven(arr)
+        {
+          
+            let newar=arr.reduce((acc,item)=>
+                acc+item
+               
+            ,0);
+            
+            console.log(newar%2==0?"even":"odd");
+            // console.log(newar%2==0?"even":"odd");
+        }
+        oddeven([0,-1,-5]) ;
+        // console.log(-1+-5%2==0?"even":"odd");
+    </script>
+</body>
+</html>

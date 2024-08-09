@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function bridgetrue(arr)
+    {
+        flag=true;
+        const newar=arr.map(item => item=="bridgeon"?flag=!flag:flag);
+        return newar;
+    }
+    console.log(bridgetrue(["bridgeon", 10101, 3.14, 53, "bridgeon"]));
+</script>
+</body>
+</html>
