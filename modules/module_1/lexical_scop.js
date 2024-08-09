@@ -3,18 +3,29 @@
  
 
 /**
- * Function c() sets the value of the variable x to 10.
+ * The function c() returns a function that, when called, 
+ * increments and returns the value of a variable x. 
  * 
- * @return {void} This function does not return anything.
+ * @return {Function} A function that increments and returns the value of x.
  */
-const c =() => {
-    // Set the value of x to 10.
-   var x = 10;
-    return  b =() =>{
-         return x++
-    }
-}
+const c = () => {
+    // Declare a variable x with an initial value of 10.
+    var x = 10;
     
-   console.log(c());
- 
-   
+    // Return a function that, when called, increments and returns the value of x.
+    return function() {
+        /**
+         * Increment the value of x by 1 and return the new value.
+         * 
+         * @return {number} The incremented value of x.
+         */
+        return x++;
+    };
+};
+    
+  const b = c();
+
+  console.log(b());
+  console.log(b());
+  console.log(b());
+  console.log(b());
