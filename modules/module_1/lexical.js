@@ -1,4 +1,16 @@
 
+function outerFunction() {
+    const outerVariable = 'I am outer';
+
+    function innerFunction() {
+        console.log(outerVariable); // 'I am outer'
+    }
+
+    innerFunction();
+}
+
+outerFunction();
+
 
 /**
  * This is the main function 'a'.
@@ -22,4 +34,5 @@ function a(){
 }
 
 a();
+
 
