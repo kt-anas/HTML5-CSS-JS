@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = (a,b,...restar) => {
+            console.log("a : "+a)
+            console.log("b : "+b)
+            console.log("rest : "+restar[1]);
+        }
+        a(12,54,23,67,23,78);
+        let b=(a,...restar) => 
+        {
+            
+            restar.forEach((item)=> {
+                
+                item*2;
+
+        });
+        }
+        console.log(b(12,54,23,67,23,78));
+    </script>
+</body>
+</html>

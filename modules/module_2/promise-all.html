@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const promise1=new Promise((resolve,reject)=>{
+            resolve(['ducati','ninja'])
+         })
+         const promise2=new Promise((resolve,reject)=>{
+            resolve(['bugatti','pagani'])
+         })
+         const promisall=Promise.all([promise1,promise2]);
+         promisall.then((res)=>console.log(res.flat()));
+         //giving an reject so it promise.all=>so it wont perform
+
+         const promise3=new Promise((resolve,reject)=>{
+            reject("error")
+         });
+         const promisall2=Promise.all([promise1,promise2,promise3])
+         .then(res=>console.log(res))
+         .catch(res=>console.log(res));
+
+
+         //Promise.allSettled()
+         //above example
+         const promiseall3=Promise.allSettled([promise1,promise3])
+         .then((res)=>console.log(res));
+         //promise.any()
+         const promiseall4=Promise.any([promise1,promise2,promise3])
+         .then((res)=>console.log(res));
+         
+    </script> 
+</body>
+</html>

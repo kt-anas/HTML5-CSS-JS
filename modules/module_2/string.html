@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let truth=" nidha belongs to me ";
+        
+        let truth1="!always mine";
+        console.log(truth);
+        console.log(truth.charAt(7));
+        console.log(truth.charCodeAt(7));
+        console.log(truth.at(11));
+        console.log(truth.slice(1,13));
+        console.log(truth.slice(-12,-3));
+        console.log(truth.substring(7,14));
+        console.log(truth.concat(truth1));
+        console.log(truth.substr(3,9));
+        console.log(truth.toUpperCase());
+        console.log(truth.toLowerCase());
+        console.log(truth.trim());
+        let tr='hh';
+        let paddedTruth = tr.padStart(5, '0');
+        console.log(paddedTruth);
+        console.log(truth.padEnd(4,"0"));
+        console.log(truth.repeat(3));
+        truth=truth.replace('belongs to me','always mine');
+        console.log(typeof truth);
+        console.log(typeof  truth.replace('belongs to me','always mine'));
+        console.log(typeof truth.split(","));
+         console.log(truth.replace('belongs to me','always mine'));
+         console.log(truth.split(","));
+         console.log(typeof truth.split(","));
+         console.log(truth);
+         console.log(truth.indexOf('to'));
+         console.log(truth.lastIndexOf('n'));
+         console.log(truth.search('belon'));
+         let str=truth.match('nidha');
+         console.log(str);
+         console.log(typeof str);
+         let str1=truth.matchAll('n');
+         console.log(str1);
+         console.log(typeof str1);
+         console.log(truth.startsWith(' '));
+         console.log(truth.endsWith('me'));
+         let price=10;
+         let s=`hey how is
+         that
+         u suffering a lot
+         dontt worry it will be
+         fine bruh;'' i suffered almost
+         ${price} years`;
+         console.log(s);
+         
+        let s1=truth.split(" ");
+        console.log(s1);
+        console.log(s1[1]);
+        let sal=null;
+        console.log(typeof sal );
+        console.log(truth.substring(-5));
+        console.log(truth.split(" "));
+        console.log(truth.substr(3));
+        let n=null;
+        console.log(typeof n);
+        
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[23,54,12,90,45];
+        const cars=['bugatti','mclaren','koenigsegg','pagani','lamborghini'];
+        console.log(arr);
+        console.log(cars);
+        console.log(arr.indexOf(12));
+        console.log(cars.sort());
+        console.log(arr.reverse());
+        // console.log(Math.min.apply(arr));
+        //foreach
+        const a=[11,31,55,9,23,89];
+        let s=0;
+        a.forEach(function(value,index){
+            console.log(value+" "+index);
+            s+=value;
+        });
+        //sort
+        console.log(s);
+        console.log(a.sort());
+        //join
+        let b=cars.join(" * ");
+        console.log(b);
+        const arrobj=[{name:"salih"},{age:"21"},{wife:'nidha'}];
+        arrobj.forEach(function(value,index){
+            console.log(value.wife);
+        });
+        //splice
+        cars.splice(0,0,'hummer')
+        console.log(cars);
+        let cars1=cars.toSpliced(3,3);
+        console.log(cars1);
+        console.log(cars);
+        //arrow function
+        let arrow = () =>{
+            consoole.log("hello");
+        }
+        let func = () => {
+            console.log("hello");
+        }
+        func();
+        //arrow
+        const calc = (a,b) => a+b;
+        console.log(calc(2,3));
+        //find method in array
+        let found = arr.find(function(item){
+           return item==12;
+        });
+        console.log(found);
+        //find method in array of object
+        let found1 = arrobj.find(function(item){
+            return item.wife=='nidha';
+        });
+        console.log(found1);
+        //find method using arrrow function
+        let found2=cars.find((item)=>{
+            return item=='pagani';
+        });
+        console.log(found2);
+        //indexOf()
+        
+        console.log(arr);
+        console.log(arr.indexOf(54));
+        //using callback function
+        // let ind = arr.indexOf(function(90){
+        //     return
+        // });
+        //filter method
+        const people = [
+            {
+                name:"salih",
+                age:21,
+                mark:100
+            },
+            {
+                name:"nidha",
+                age:18,
+                mark:90
+            },
+            {
+                name:"afham",
+                age:22,
+                mark:95
+            },
+            {
+            name:"anjali",
+                age:19,
+                mark:70
+            },
+            {
+                name:"midhun",
+                age:20,
+                mark:75
+            },
+            {
+                name:"priyanandan",
+                age:20,
+                mark:80
+            }
+        ];
+        console.log(people);
+        let get = people.filter((item) => item.age<19);
+        let getMark = people.filter(function(item){
+           return item.mark>89;
+            
+        });
+        console.log(get);
+        console.log(getMark);
+        //map mthod
+        //we use above array
+        const newar = people.map((item) => item.name +" "+ item.mark);
+        console.log(newar);
+        const markar=people.map(function(item){
+            return item.mark*10;
+        });
+        console.log(markar);
+        const num=[22,33,11,40,26]
+        let sqrt = num.map(Math.sqrt);
+        console.log(sqrt);
+        //reduce method using above array
+        let sum = num.reduce((total,value)=>total+value,0);
+        console.log(sum);
+        //concatinatin string using reduce
+        let conc = cars.reduce((total,value)=>total+" "+value);
+        console.log(conc);
+        //Pass Function Value as Default Value
+        const sum1 = () => 20;
+        let calculate = function(x,y=x+10*sum1()){
+            return  x+y;
+
+        }
+        console.log(calculate(10));
+        
+    </script>
+</body>
+</html>

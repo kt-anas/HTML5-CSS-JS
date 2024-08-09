@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[1,8,4,3,5];
+        var len=arr.length;
+        for(let i=len-1;i>=0;i--)
+        {
+            for(let j=i-1;j>=0;j--)
+            {
+            if(arr[i]>arr[j])
+            {
+                let t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+            }
+        }
+        console.log("array in decending order : "+arr);
+    </script>
+</body>
+</html>

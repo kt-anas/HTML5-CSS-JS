@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">heloo</h1>
+    <script>
+        onload = function() {
+            // Your logic here
+            const b = document.getElementById('header');
+            b.innerHTML = 'nidhaSalih';
+            b.style.color = 'red';
+        };
+        function fnobj(name,wife){
+            this.name=name;
+            this.wife=wife
+        }
+        let obj=new fnobj('salih','nidha');
+        let obj1=new fnobj('salih','nidha');
+        let obj3=new Object();
+        obj3.name='salih';
+        console.log(obj,obj1,obj3);
+    </script>
+</body>
+</html>

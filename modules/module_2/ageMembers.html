@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ageMembers(arr)
+        {
+            const newar=[];
+            const newr=arr.map(item => item.age);
+            newr.sort((a,b)=>a-b);
+            newar.push(newr[0],newr[newr.length-1],newr[newr.length-1]-newr[0]);
+            return newar;
+        }console.log(
+            ageMembers([
+{ name: "Mark", age: 38 },
+{ name: "Charlie", age: 10 },
+{ name: "Anna", age: 25 }
+]) );
+        </script>
+</body>
+</html>

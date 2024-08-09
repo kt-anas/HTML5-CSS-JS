@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function totalPrice(arr){
+            const newar=arr.reduce((acc,item)=> acc+item.quantity*item.price,0);
+            return newar;
+        }
+        console.log(totalPrice([
+{ product: "Milk", quantity: 1, price: 10 },
+{ product: "Eggs", quantity: 12, price: 5 },
+{ product: "Bread", quantity: 2, price: 20 },
+{ product: "Cheese", quantity: 1, price: 30 }
+]));
+    </script>
+</body>
+</html>
