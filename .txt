@@ -1,0 +1,39 @@
+  
+➢	CDN vs Download 
+➢	Event Listeners 
+➢	Call Stack 
+➢	Types of Scopes 
+➢	Array Methods 	 	 	 	 
+➢	String Methods 
+➢	Object Methods 
+➢	Number Methods ➢ Boolean Methods 
+➢	Math Methods 
+➢	Execution Context 
+➢	Data Types 
+➢	Key Words 
+➢	Functions 
+➢	Types of Functions 
+➢	Arithmetic Operators 
+➢	Logical Operators 
+➢	Assignment Operators 
+➢	Comparison Operators 
+➢	Array Iterations 
+➢	This Keywords 
+➢	Event Handlers 
+➢	Types of Errors 
+➢	Exception Handling 
+➢	Hoisting 
+➢	Strict Mode 
+➢	Call Back 
+➢	Call Back Hell 
+➢	Closure 
+➢	Higher Order Function 
+➢	Pure Function 
+➢	Prototype 
+➢	IIFE 
+➢	Anonymous Function 
+➢	Event Loop 
+➢	Optional Chaining 
+➢	Local Storage & Session Storage 
+➢	Currying 
+➢	Call, Apply, Bind 
