@@ -16,3 +16,4 @@ console.log(arr); // [ 1, 2, 3, 4, 5 ]
 let arr1 = [1,2,3,4];
 arr.pop();
 console.log(arr1);// [ 1, 2, 3, 4 ]
+

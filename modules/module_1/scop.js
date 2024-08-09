@@ -19,9 +19,9 @@ function nameFunc(){
 console.log(name)
 
 
-//    nameFunc();  // nameles
+   nameFunc();  // nameles
 
-//  console.log(name1);  // not defined
+ console.log(name1);  // not defined
 
 
 //  var: Function-scoped or globally-scoped variable, can be re-declared and updated.

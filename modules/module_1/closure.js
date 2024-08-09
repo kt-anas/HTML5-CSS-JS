@@ -4,16 +4,34 @@
 //   closure is a feature where a function retains access to its lexical scope even after
 //  the function has finished executing.
 
-//This means that a function can remember and access variables from the scope in which it was created, 
-// even when it's called outside that scope
-function createCounter(){
-   
 
-    let count = 0;
-    return function(){
-        count += 1;
-        return count;
-    };
+/**
+ * createCounter function
+ * 
+ * This function creates a closure, where an inner function retains access to its lexical scope even after
+ * the outer function has finished executing. The inner function increments a 'count' variable and returns it.
+ * 
+ * @return {function} Anonymous function that increments and returns the 'count' variable
+ */
+function createCounter(){
+  
+  /**
+   * The 'count' variable is declared and initialized to 0.
+   * This variable is a part of the lexical scope of the 'createCounter' function.
+   * The inner function created by 'createCounter' has access to this variable.
+   * @type {number}
+   */
+  let count = 0;
+  
+  /**
+   * The anonymous function returned by 'createCounter' increments the 'count' variable
+   * and returns its new value.
+   * @return {number} The incremented value of 'count'
+   */
+  return function(){
+    count += 1;
+    return count;
+  };
 }
 
 console.log(createCounter()); // [Function (anonymous)]
