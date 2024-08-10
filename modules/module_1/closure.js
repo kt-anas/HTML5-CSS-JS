@@ -3,7 +3,7 @@
 
 //   closure is a feature where a function retains access to its lexical scope even after
 //  the function has finished executing.
-
+ 
 
 /**
  * createCounter function
@@ -43,4 +43,14 @@ console.log(counter());//2
 console.log(counter());//3
 console.log(counter());//4
 
- 
+
+function a(){
+    var vr=10;
+    return function  b(){
+        console.log(vr);
+    }
+}
+var h = a();
+
+ console.log(h());
+
