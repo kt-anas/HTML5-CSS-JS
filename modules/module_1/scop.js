@@ -4,24 +4,26 @@ var  name = "nameles";
 
 
 function nameFunc(){
-    var name1 = "name";
+    // var name1 = "name";
     let age = 5;
-    console.log(name);
+    // console.log(name);
    
 }
 
 
 {
-   const name = "anas"
-   console.log(age);
+    
+   var name = "na";
+//    console.log(age);
 }
 
 console.log(name)
+// console.log(name)
 
 
-   nameFunc();  // nameles
+//    nameFunc();  // nameles
 
- console.log(name1);  // not defined
+//  console.log(name1);  // not defined
 
 
 //  var: Function-scoped or globally-scoped variable, can be re-declared and updated.
