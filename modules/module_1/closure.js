@@ -47,10 +47,22 @@ console.log(counter());//4
 function a(){
     var vr=10;
     return function  b(){
-        console.log(vr);
+        return vr
     }
 }
 var h = a();
+console.log(h());
 
- console.log(h());
+
+function func(){
+
+    function name() {
+        console.log(x);
+    }
+
+    name();
+}
+
+const x = 10;
+func();
 
