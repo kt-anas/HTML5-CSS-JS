@@ -1,8 +1,0 @@
-
-Execution Context
-
-
-=> An execution context is essentially a container that holds the code that is being executed, including the variables, functions, and the scope
-=>  It determines how variables and functions are accessed and executed.
-=> Every time a function is called or code is executed, a new execution context is created. 
-
