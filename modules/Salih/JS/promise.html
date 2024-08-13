@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.saw nidha
+        //2.propsed
+        //.got accepted
+        function sawnidha()
+        {
+            return new Promise((resolve,rejec)=>{
+            setTimeout(()=>{
+            resolve("saw nidha");
+            
+        },1500);
+    });
+        }
+        function proposed()
+        {
+            return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+            resolve("proposed ");
+            
+        },2000);
+    });
+    }
+        function accepted()
+        {
+            return new Promise((resolve,reject)=>{
+                let a=false;
+            setTimeout(()=>{
+                if(a)
+            resolve("got accepted");
+                else
+                reject("oompi")
+           
+        },2500);
+    });
+}
+sawnidha().then(value=>{console.log(value);return proposed()})
+.then(value=>{console.log(value);return accepted()})
+.then(value=>{console.log(value);console.log("married")})
+.catch(error=>console.log(error)).finally(()=>console.log("married"))
+;
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.add
+        //2.substract
+        //3.multiply
+        //4.division
+        // function add(num1,num2,callback)
+        // {
+        //     setTimeout(()=>{
+        //     callback(num1+num2);
+        // },1000)
+        // }
+        // function substract(num1,num2,callback)
+        // {
+        //     setTimeout(()=>{
+        //     callback(num1-num2);
+        // },1200)
+        // }
+        // function multiply(num1,num2,callback)
+        // {
+        //     setTimeout(()=>{
+        //     callback(num1*num2);
+        // },1500)
+        // }
+        // function division(num1,num2,callback)
+        // {
+        //     setTimeout(()=>{
+        //     callback(num1/num2);
+        // },2000)
+        // }
+        // add(5,3,(sum)=>{
+        //     console.log(sum);
+        //     substract(sum,2,(deffrence)=>{
+        //         console.log(deffrence);
+        //         multiply(deffrence,4,(product)=>{
+        //             console.log(product);
+        //             division(product,10,(quotient)=>{
+        //                 console.log(quotient);
+        //                 console.log("operation completed")
+        //             })
+        //         })
+        //     })
+        // });
+
+
+        //1.add
+        //2.substract
+        //3.multiply
+        //4.division
+        function add(num1,num2)
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve(num1+num2)
+            },1000);
+            })
+        }
+        function substract(num1,num2)
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve(num1-num2)
+            },1200);
+            })        }
+        function multiply(num1,num2)
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                resolve(num1*num2)
+            },1500);
+            })
+        }
+        function division(num1,num2)
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                if(num2!=0)
+                resolve(num1/num2)
+                else
+                reject("cannot perform operation")
+            },1800);
+            })
+        }
+
+        add(5,3).then(sum=>{
+            console.log(sum);
+            return substract(sum,2)
+        })
+        .then(deffrence=>{ 
+            console.log(deffrence);
+            return multiply(deffrence,4);
+        })
+        .then(product=>{
+            console.log(product);
+            return division(product,0);
+        })
+        .then(quotient=>{
+            console.log(quotient)
+        })
+        .catch(response=>console.error(response))
+        .finally(()=>console.log("operation completed"));
+    </script>
+</body>
+</html>

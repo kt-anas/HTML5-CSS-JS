@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.saw nidha
+        //2.propsed
+        //3.got accepted
+        function sawnidha()
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+            resolve("saw nidha");
+        },1000);
+            })
+           
+        }
+        function proposed()
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+            resolve("propsed");
+        },2000);
+            })
+        }
+        function accepted()
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+            reject("got rejected");
+        },2200);
+            })
+        }
+        sawnidha().then((value)=>
+        {console.log(value);
+            return proposed();
+
+        }
+    )
+    .then((value=>{console.log(value);return accepted()}))
+    .then(value=>console.log(value))
+    .catch(value=>console.log(value))
+    .finally(()=>console.log('her fathher said yes to our married'));
+    
+        
+      
+    </script>
+</body>
+</html>
