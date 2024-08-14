@@ -1,0 +1,20 @@
+Mouse Events: 'click', 'dblclick', 'mousedown', 'mouseup', 'mousemove', 'mouseover', 'mouseout'
+
+Keyboard Events: 'keydown', 'keyup', 'keypress'
+
+
+Form Events: 'submit', 'change', 'input', 'focus', 'blur'
+
+Window Events: 'load', 'resize', 'scroll', 'unload', 'beforeunload'
+
+Touch Events: 'touchstart', 'touchmove', 'touchend', 'touchcancel'
+
+Pointer Events: 'pointerdown', 'pointerup', 'pointermove', 'pointerover', 'pointerout'
+
+Drag Events: 'drag', 'dragstart', 'dragend', 'dragover', 'dragenter', 'dragleave', 'drop'
+
+Animation Events: 'animationstart', 'animationend', 'animationiteration'
+
+Transition Events: 'transitionstart', 'transitionend', 'transitioncancel'
+
+Clipboard Events: 'copy', 'cut', 'paste'
