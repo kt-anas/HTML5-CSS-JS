@@ -12,4 +12,4 @@
     }
     return step;
 }
-console.log(NumberOfSteps(14))
+console.log(NumberOfSteps(14));

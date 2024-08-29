@@ -1,0 +1,17 @@
+.effect{
+    position:relative;
+    height:0;
+    /* width:0; */
+    background-color: rgba(0, 0, 0, 0.123);
+    filter:brightness(50%)
+}
+img:hover{
+    transition: hovereffect;
+    animation: hovereffect 3s linear ;
+}
+ 
+@keyframes hovereffect{
+0%{filter:brightness(50%)}
+50%{filter:brightness(70%)}
+100%{filter:brightness(90%)}
+}
