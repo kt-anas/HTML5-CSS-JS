@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.js"></script> -->
+
+    
+
+
+    <script>
+
+function btnClick(val) {
+    
+    const screen = document.getElementById("screen");
+    const displayValue = screen.value;
+    const lastChar = displayValue.charAt(displayValue.length - 1);
+    const operators = ['+', '-', '*', '/', '%','.'];
+
+    if (operators.includes(lastChar) && operators.includes(val)) {
+
+        return;
+    }
+
+   
+    screen.value += val;
+}
+function btnClear() {
+    document.getElementById("screen").value = "";
+}
+
+function equalClick(){
+    var text=document.getElementById("screen").value;
+    var result=eval(text)
+    document.getElementById("screen").value=result;
+}
+function btnRemove() {
+    var screen = document.getElementById("screen");
+    var value = screen.value;
+    var newValue = value.slice(0, -1); 
+    screen.value = newValue; 
+}
+   </script>
+
+
+</head>
+<body class=" flex justify-center items-center min-h-screen  bg-black">
+   <div class=" 
+   bg-black md:border-2 md:border-white  lg:border-2 lg:border-white">
+    <div>
+
+        <input id="screen" type="text" placeholder="0" class="m-7 w-80 h-14 text-xl text-white bg-black text-right text-2xl font-bold pr-5 pointer-events-none">
+    </div>
+    <div class=" flex gap-9 p-5">
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14 text-center text-2xl font-bold" onclick="btnClear()">AC</button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl font-bold" onclick="btnClick('%')">%</button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl font-bold p-4"onclick="btnRemove()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
+          </svg>
+          </button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl font-bold" onclick="btnClick('/')">&#247;</button>
+    </div>
+    <div class="flex gap-9 p-5">
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14  text-center text-2xl font-bold" onclick="btnClick(7)">7</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 text-center text-2xl  font-bold" onclick="btnClick(8)">8</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14  text-center text-2xl font-bold" onclick="btnClick(9)">9</button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl font-bold" onclick="btnClick('*')">*</button>
+    </div>
+    <div class="flex gap-9 p-5">
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 text-center text-2xl font-bold" onclick="btnClick(4)">4</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 text-center text-2xl font-bold" onclick="btnClick(5)">5</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14  text-center text-2xl font-bold" onclick="btnClick(6)">6</button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl font-bold" onclick="btnClick('-')">-</button>
+    </div>
+    <div class="flex gap-9 p-5">
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14  text-center text-2xl  font-bold" onclick="btnClick(1)">1</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14  text-center text-2xl font-bold" onclick="btnClick(2)">2</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 text-center text-2xl  font-bold" onclick="btnClick(3)">3</button>
+        <button class="rounded-full bg-gray-700 text-yellow-500 w-14 h-14  text-center text-2xl  font-bold" onclick="btnClick('+')">+</button>
+    </div>
+    <div class="flex gap-9 p-5">
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 font-bold text-center text-2xl" onclick="btnClick('00')">00</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 font-bold text-center text-2xl" onclick="btnClick(0)" >0</button>
+        <button class="rounded-full bg-gray-700 text-white w-14 h-14 font-bold text-center text-2xl pb-2" onclick="btnClick('.')" >.</button>
+        <button class="rounded-full bg-red-600 text-white w-14 h-14 text-center text-3xl font-bold pb-2" onclick="equalClick('=')">=</button>
+    </div>
+
+   </div>
+
+    
+</body>
+</html>
