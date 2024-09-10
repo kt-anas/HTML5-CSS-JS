@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Largest Value</title>
+</head>
+<body>
+    <script>
+        // Define an array of numbers
+        const numbers = [10, 5, 78, 23, 90, 34, 67];
+
+        // Initialize the largest number with the first element
+        let largestNumber = numbers[0];
+
+        // Loop through the array
+        for (let i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largestNumber) {
+                largestNumber = numbers[i];
+            }
+        }
+
+        // Output the largest number
+        console.log("The largest number is:", largestNumber);
+    </script>
+</body>
+</html>
