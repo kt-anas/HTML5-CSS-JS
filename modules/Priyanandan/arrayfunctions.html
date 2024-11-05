@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+         const fruits = ["Banana", "Orange", "Apple", "orange"];
+         console.log(fruits.length);
+
+        //tostring used to convert array to string 
+         console.log(fruits.toString());
+
+         //at() used to return indexed element in  an array
+         console.log(fruits.at(0)); //out=Banana
+
+         //join() used to join array elements into a string 
+         console.log(fruits.join("**"));
+         
+         //shift() used to shift out first element in array and shift all elements into lower index
+         const f = ["Banana", "Orange", "Apple", "Mango"];
+         console.log(f.shift());
+         console.log(f.at(0));
+
+         //unshit method adds a new element to an array (at the beginning), and "unshifts" older elements:
+         console.log(f.unshift("lemon"));
+         console.log(f)
+
+         //concat used merging arrays
+         console.log(fruits.concat(f));
+
+         //copyWithin() copies array elements to another position in an array, overwriting existing values
+         console.log(f.copyWithin(0,2));
+
+         //flat() method creates a new array with sub-array elements concatenated to a specified depth.
+         const myArr = [[1,2],[3,4],[5,6]];
+        console.log(myArr.flat());
+         
+        var a=["Banana", "Orange", "Apple", "Mango"];
+
+        console.log(a.sort());
+        console.log(a)
+        //splice() add or remove elements into array its overwriting the existing value
+        var arr=["car","jeep","bus","lorry"];
+        console.log(arr);
+        arr.splice(2,0,"train","plain");
+        console.log(arr);
+
+        //slice() return a selected array elements as new array
+
+        var ar=["car","jeep","bus","lorry"];
+        console.log(ar);
+        v=ar.slice(1,4);
+        console.log(v);
+//for in
+        var y=["car","jeep"];
+        for( c in y){
+            console.log(c)
+        }
+        var k={
+            name:"afham",
+            age:20
+        };
+        for(n in k){
+            console.log(n)
+        }
+        //for of
+        var y=["car","jeep"];
+        for(e of y){
+            console.log(e);
+        }
+         var c=["Banana", "Orange", "Apple"]
+         for (var j of c){
+            console.log(c);
+         }
+//map
+var data=[1,2,3];
+data.map((x)=> console.log(x*3))
+ var info=["mango","apple"];
+  var m=info.map((infor)=> infor)
+  console.log(m);
+
+var detail=[{
+    name:"elon",
+    age:21
+},
+{
+    name:"mark",
+    age:23
+}
+]
+detail.map((alldetail) => console.log(alldetail.name))
+
+
+
+
+//reduce
+var arn=[1,2,3];
+var result=arn.reduce((total,itemss)=>{
+     return total+itemss}
+    ,0)
+    console.log(result)
+
+//filter
+var val=[1,2,3,4,5,6,7,8,9,10];
+var odd=val.filter((num)=> {
+   return num%2==0
+
+})
+const fr = ['apple', 'banana', 'mango'];
+
+fr.forEach(fruit => console.log(fruit));
+console.log(odd);
+
+
+
+
+//self invoking
+(function(){
+    console.log("hello");
+})();
+
+
+//arrow function 
+
+var sum=(a)=>a+a;
+console.log(sum(4))
+
+
+
+
+  </script>
+   
+</body>
+</html>

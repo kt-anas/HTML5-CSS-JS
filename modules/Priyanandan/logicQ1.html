@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <script>
+        var a=[4,20,10,6];
+        let firstNum=0;
+        let secondNum=0; 
+
+        for(let i=0;i<a.length;i++){
+            if(a[i] < 1000){
+                
+                if(a[i] > firstNum){
+
+                      secondNum = firstNum;
+                      
+                      firstNum = a[i]
+                }
+            }
+        }
+
+        console.log(firstNum);
+        console.log(secondNum);
+        
+        
+    </script>
+</body>
+</html>
